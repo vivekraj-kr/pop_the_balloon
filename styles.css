@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #fefcea;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #fefcea 0%, #3abefc 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #fefcea 0%, #3abefc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #fefcea 0%, #3abefc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#3abefc',GradientType=1 );
+}
+
+.balloon {
+  top: calc(100vh - 120px);
+  position: relative;
+}
+.balloon-1 {
+  animation: fly 3s linear 3s infinite alternate;
+}
+.balloon-2 {
+  animation: fly 6s linear 3s infinite alternate;
+}
+.balloon-3 {
+  animation: fly 4s linear 3s infinite alternate;
+}
+.balloon-4 {
+  animation: fly 8s linear 3s infinite alternate;
+}
+.balloon-5 {
+  animation: fly 5s linear 3s infinite alternate;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-image: url("https://thumb.ibb.co/kTi7j6/pop.png");
+  background-size: 100%;
+}
+
+input[type="checkbox"]:checked + label {
+  opacity: 0;
+}
+
+@keyframes fly {
+  from {
+    top: calc(100vh - 120px);
+  }
+  to {
+    top: 0;
+  }
+}
